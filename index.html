@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evelyn Rodriguez — Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a class="brand" href="#">Evelyn Rodriguez</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <img src="img/profile.jpg" alt="Evelyn Rodriguez" class="avatar" />
+      <h1 class="title">Evelyn Rodriguez</h1>
+      <p class="subtitle">HCI Informatics @ UCI · Developer & Designer</p>
+
+      <div class="cta-row">
+        <a class="btn" href="https://github.com/errodri3" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/evelyn-rodriguez-r" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects" class="section projects">
+      <div class="wrap">
+        <h2>Selected Projects</h2>
+        <p class="lead">A few projects I’ve built — click through for code and demos.</p>
+
+        <div class="grid">
+          <article class="card">
+            <img src="img/project1.png" alt="Project screenshot" class="card-img" />
+            <h3>Project One</h3>
+            <p>Short description. <a href="#">View code</a> • <a href="#">Live</a></p>
+          </article>
+
+          <article class="card">
+            <img src="img/project2.png" alt="Project screenshot" class="card-img" />
+            <h3>Project Two</h3>
+            <p>Short description. <a href="#">View code</a> • <a href="#">Live</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>No screenshot yet — replace with yours. <a href="#">View code</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>I’m a HCI Informatics student at UCI interested in UX, frontend development, and building accessible interfaces. I enjoy designing clean interactions and writing clear code.</p>
+        <ul class="skills">
+          <li>HTML & CSS</li>
+          <li>JavaScript</li>
+          <li>Figma</li>
+          <li>React (learning)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>Want to collaborate or ask about a project? Email me at <a href="mailto:errodriguez0703@gmail.com">errodriguez0703@gmail.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Evelyn Rodriguez · <a href="https://github.com/errodri3">errodri3</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
