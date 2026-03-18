@@ -1,102 +1,199 @@
 <!doctype html>
 <html lang="en">
+
+<!--
+WRITTEN BY: Evelyn Rodriguez
+EMAIL: errodri3@uci.edu
+-->
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Evelyn Rodriguez — Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="utf-8">
+  <meta name="author" content="Evelyn Rodriguez">
+  <meta name="description" content="Evelyn Rodriguez's Portfolio">
+   <!-- you would link to an external stylesheet here! -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="./img/cat.png" type="image/png">
+  <script src="https://kit.fontawesome.com/3b63f45475.js" crossorigin="anonymous"></script>
+   <!-- you would also link to Bootstrap here! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Evelyn Rodriguez - Portfolio</title>
 </head>
+
+<!--
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="nav-left">
-        <a class="brand" href="#">Evelyn Rodriguez</a>
-      </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer">
+       W3C validator
+    </a>
+  </p>
+-->
+
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="/img/Computer01.ico" class="logo" alt="Computer icon logo">
+      <ul>
+        <li><a href="#header">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a class="btn-resume" href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
       </ul>
     </nav>
-
-    <div class="hero">
-      <img src="img/profile.jpg" alt="Evelyn Rodriguez" class="avatar" />
-      <h1 class="title">Evelyn Rodriguez</h1>
-      <p class="subtitle">HCI Informatics @ UCI · Developer & Designer</p>
-
-      <div class="cta-row">
-        <a class="btn" href="https://github.com/errodri3" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/evelyn-rodriguez-r" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+    <div class="header-text">
+      <p>UI/UX Designer</p>
+      <h1>Hi, I'm <span>Evelyn</span><br>Rodriguez From California</h1>
     </div>
-  </header>
-
-  <main>
-    <section id="projects" class="section projects">
-      <div class="wrap">
-        <h2>Selected Projects</h2>
-        <p class="lead">A few projects I’ve built, click through for code and demos.</p>
-
-        <div class="grid">
-          <article class="card">
-            <img src="img/project1.png" alt="Project screenshot" class="card-img" />
-            <h3>Project One</h3>
-            <p>Short description. <a href="#">View code</a> • <a href="#">Live</a></p>
-          </article>
-
-          <article class="card">
-            <img src="img/project2.png" alt="Project screenshot" class="card-img" />
-            <h3>Project Two</h3>
-            <p>Short description. <a href="#">View code</a> • <a href="#">Live</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Project Three</h3>
-            <p>No screenshot yet — replace with yours. <a href="#">View code</a></p>
-          </article>
+  </div>
+<!-- About Section -->
+</div>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="/img/me.png" alt="me">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I’m a HCI Informatics student at UCI interested in UI/UX, frontend development, 
+        and building accessible interfaces.
+        </p>
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+            <li><span>Web Development</span><br>Web App Development</li>
+            <li><span>App Development</span><br>Building Android/iOS Apps</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>Graphic Design Intern</span><br>Blank</li>
+            <li><span>STEAM Instructor</span><br>Blank</li>
+            <li><span>Graphic Designer/CS Representative</span><br>Blank</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2023-2027</span><br>Bachelor of Science in Informatics HCI</li>
+            <li><span>Blank</span><br>Blank</li>
+            <li><span>Blank</span><br>Blank</li>
+          </ul>
         </div>
       </div>
-    </section>
-
-    <section id="about" class="section about">
-      <div class="wrap">
-        <h2>About</h2>
-        <p>I’m a HCI Informatics student at UCI interested in UX, frontend development, and building accessible interfaces.</p>
-        <ul class="skills">
-          <li>HTML & CSS</li>
-          <li>JavaScript</li>
-          <li>Figma</li>
-          <li>React (learning)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p>Want to collaborate or ask about a project? Email me at <a href="mailto:errodriguez0703@gmail.com">errodriguez0703@gmail.com</a>.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© <span id="year"></span> Evelyn Rodriguez · <a href="https://github.com/errodri3">errodri3</a></p>
     </div>
-  </footer>
+  </div>
+</div>
 
-  <script>
-    // year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<!-- Services -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p>Description</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>UI/UX Design</h2>
+        <p>Description</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>App Design</h2>
+        <p>Description</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-    // mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-  </script>
+<!-- Portfolio -->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="/img/work.png" alt="Screenshot of Project 1">
+        <div class="layer">
+          <h2>Project 1</h2>
+          <p> Project 1 Description</p>
+          <a href="#"><i class="fa-solid fa-link"></i></a>"
+        </div>
+      </div>
+      <div class="work">
+        <img src="/img/work.png" alt="Screenshot of Project 2">
+        <div class="layer">
+          <h2>Project 2</h2>
+          <p> Project 2 Description</p>
+          <a href="#"><i class="fa-solid fa-link"></i></a>"
+        </div>
+      </div>
+      <div class="work">
+        <img src="/img/work.png" alt="Screenshot of Project 3">
+        <div class="layer">
+          <h2>Project 3</h2>
+          <p> Project 3 Description</p>
+          <a href="#"><i class="fa-solid fa-link"></i></a>"
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+  </div>
+</div>
+
+<!-- Contact -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> errodri3@uci.edu</p>
+        <p><i class="fa-solid fa-phone"></i> (562) 708 - 6011</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/ibamboozled/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="www.linkedin.com/in/evelyn-rodriguez-r"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <a href="ER_Resume.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <P>Copyright © Evelyn R. </P>
+  </div>
+</div>
+
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname) {
+    for (tablink of tablinks) {
+      tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+</script>
 </body>
 </html>
